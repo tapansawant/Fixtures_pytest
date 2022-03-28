@@ -1,49 +1,49 @@
 import Divisible
+import pytest
 
 
-def test_checkDivisibleby5():
-    x = 10
-    result = Divisible.checkDivisibleby5(x)
+@pytest.fixture
+def input():
+    a = 25
+    return a
+
+
+def test_checkDivisibleby5(input):
+    # x = 10
+    result = Divisible.checkDivisibleby5(input)
     assert True == result
 
 
-def test_fcheckDivisibleby5():
-    x = 11
-    result = Divisible.checkDivisibleby5(x)
+def test_fcheckDivisibleby5(input):
+    result = Divisible.checkDivisibleby5(input)
     assert False == result
 
 
-def test_checkDivisibleby7():
-    x = 14
-    result = Divisible.checkDivisibleby7(x)
+def test_checkDivisibleby7(input):
+    result = Divisible.checkDivisibleby7(input)
     assert True == result
 
 
-def test_fcheckDivisibleby7():
-    x = 11
-    result = Divisible.checkDivisibleby7(x)
+def test_fcheckDivisibleby7(input):
+    result = Divisible.checkDivisibleby7(input)
     assert False == result
 
 
-def test_checkDivisibleby9():
-    x = 18
-    result = Divisible.checkDivisibleby9(x)
+def test_checkDivisibleby9(input):
+    result = Divisible.checkDivisibleby9(input)
     assert True == result
 
 
-def test_fcheckDivisibleby9():
-    x = 17
-    result = Divisible.checkDivisibleby9(x)
+def test_fcheckDivisibleby9(input):
+    result = Divisible.checkDivisibleby9(input)
     assert False == result
 
 
-def test_checkDivisibleby11():
-    x = 22
-    result = Divisible.checkDivisibleby11(x)
+def test_checkDivisibleby11(input):
+    result = Divisible.checkDivisibleby11(input)
     assert True == result
 
 
-def test_fcheckDivisibleby11():
-    x = 23
-    result = Divisible.checkDivisibleby11(x)
+def test_fcheckDivisibleby11(input):
+    result = Divisible.checkDivisibleby11(input)
     assert False == result

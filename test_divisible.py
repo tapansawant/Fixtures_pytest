@@ -2,11 +2,12 @@ import Divisible
 import pytest
 
 
-@pytest.mark.parametrize("num,output", [(5, True), (2, False), (10, True), (7, False)])
+# @pytest.fixture()
 # def input():
 #     a = 25
 #     return a
 
+@pytest.mark.parametrize("num,output", [(5, True), (2, False), (10, True), (7, False)])
 def test_checkDivisibleby5(num, output):
     result = Divisible.checkDivisibleby5(num)
     assert result == output
